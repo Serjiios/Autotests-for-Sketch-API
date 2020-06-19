@@ -30,6 +30,11 @@
       "identifier" : "Group.test"
     },
     {
+      "script" : "dom/layers/HotSpot.test.js",
+      "name" : "HotSpot.test",
+      "identifier" : "HotSpot.test"
+    },
+    {
       "script" : "dom/layers/Image.test.js",
       "name" : "Image.test",
       "identifier" : "Image.test"
