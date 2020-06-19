@@ -1,0 +1,285 @@
+{
+  "name" : "Autotests for Sketch API",
+  "version" : "1.0",
+  "identifier" : "Autotests for Sketch API",
+  "disableCocoaScriptPreprocessor": true,
+  "description" : "A set of autotests for checking Sketch API",
+  "icon" : "api-reference.png",
+  "authorEmail" : "Lunacy@icons8.com",
+  "author" : "Lunacy Team",
+  "appcast": "заполнить",
+  "commands" : [
+    {
+      "script" : "dom/assets/ColorAsset.test.js",
+      "name" : "ColorAsset.test",
+      "identifier" : "ColorAsset.test"
+    },
+    {
+      "script" : "dom/assets/GradientAsset.test.js",
+      "name" : "GradientAsset.test",
+      "identifier" : "GradientAsset.test"
+    },
+    {
+      "script" : "dom/layers/Artboard.test.js",
+      "name" : "Artboard.test",
+      "identifier" : "Artboard.test"
+    },
+    {
+      "script" : "dom/layers/Group.test.js",
+      "name" : "Group.test",
+      "identifier" : "Group.test"
+    },
+    {
+      "script" : "dom/layers/Image.test.js",
+      "name" : "Image.test",
+      "identifier" : "Image.test"
+    },
+    {
+      "script" : "dom/layers/Layer.test.js",
+      "name" : "Layer.test",
+      "identifier" : "Layer.test"
+    },
+    {
+      "script" : "dom/layers/Page.test.js",
+      "name" : "Page.test",
+      "identifier" : "Page.test"
+    },
+    {
+      "script" : "dom/layers/Shape.test.js",
+      "name" : "Shape.test",
+      "identifier" : "Shape.test"
+    },
+    {
+      "script" : "dom/layers/ShapePath.test.js",
+      "name" : "ShapePath.test",
+      "identifier" : "ShapePath.test"
+    },
+    {
+      "script" : "dom/layers/Slice.test.js",
+      "name" : "Slice.test",
+      "identifier" : "Slice.test"
+    },
+    {
+      "script" : "dom/layers/StyledLayer.test.js",
+      "name" : "StyledLayer.test",
+      "identifier" : "StyledLayer.test"
+    },
+    {
+      "script" : "dom/layers/SymbolInstance.test.js",
+      "name" : "SymbolInstance.test",
+      "identifier" : "SymbolInstance.test"
+    },
+    {
+      "script" : "dom/layers/SymbolMaster.test.js",
+      "name" : "SymbolMaster.test",
+      "identifier" : "SymbolMaster.test"
+    },
+    {
+      "script" : "dom/layers/Text.test.js",
+      "name" : "Text.test",
+      "identifier" : "Text.test"
+    },
+    {
+      "script" : "dom/models/CurvePoint.test.js",
+      "name" : "CurvePoint.test",
+      "identifier" : "CurvePoint.test"
+    },
+    {
+      "script" : "dom/models/Document.test.js",
+      "name" : "Document.test",
+      "identifier" : "Document.test"
+    },
+    {
+      "script" : "dom/models/ExportFormat.test.js",
+      "name" : "ExportFormat.test",
+      "identifier" : "ExportFormat.test"
+    },
+    {
+      "script" : "dom/models/Flow.test.js",
+      "name" : "Flow.test",
+      "identifier" : "Flow.test"
+    },
+    {
+      "script" : "dom/models/ImageData.test.js",
+      "name" : "ImageData.test",
+      "identifier" : "ImageData.test"
+    },
+    {
+      "script" : "dom/models/ImportableObject.test.js",
+      "name" : "ImportableObject.test",
+      "identifier" : "ImportableObject.test"
+    },
+    {
+      "script" : "dom/models/Library.test.js",
+      "name" : "Library.test",
+      "identifier" : "Library.test"
+    },
+    {
+      "script" : "dom/models/Override.test.js",
+      "name" : "Override.test",
+      "identifier" : "Override.test"
+    },
+    {
+      "script" : "dom/models/Point.test.js",
+      "name" : "Point.test",
+      "identifier" : "Point.test"
+    },
+    {
+      "script" : "dom/models/Rectangle.test.js",
+      "name" : "Rectangle.test",
+      "identifier" : "Rectangle.test"
+    },
+    {
+      "script" : "dom/models/Selection.test.js",
+      "name" : "Selection.test",
+      "identifier" : "Selection.test"
+    },
+    {
+      "script" : "dom/models/SharedStyle.test.js",
+      "name" : "SharedStyle.test",
+      "identifier" : "SharedStyle.test"
+    },
+    {
+      "script" : "dom/style/Blur.test.js",
+      "name" : "Blur.test",
+      "identifier" : "Blur.test"
+    },
+    {
+      "script" : "dom/style/Border.test.js",
+      "name" : "Border.test",
+      "identifier" : "Border.test"
+    },
+    {
+      "script" : "dom/style/BorderOptions.test.js",
+      "name" : "BorderOptions.test",
+      "identifier" : "BorderOptions.test"
+    },
+    {
+      "script" : "dom/style/Color.test.js",
+      "name" : "Color.test",
+      "identifier" : "Color.test"
+    },
+    {
+      "script" : "dom/style/Fill.test.js",
+      "name" : "Fill.test",
+      "identifier" : "Fill.test"
+    },
+    {
+      "script" : "dom/style/Gradient.test.js",
+      "name" : "Gradient.test",
+      "identifier" : "Gradient.test"
+    },
+    {
+      "script" : "dom/style/GradientStop.test.js",
+      "name" : "GradientStop.test",
+      "identifier" : "GradientStop.test"
+    },
+    {
+      "script" : "dom/style/Shadow.test.js",
+      "name" : "Shadow.test",
+      "identifier" : "Shadow.test"
+    },
+    {
+      "script" : "dom/style/Style.test.js",
+      "name" : "Style.test",
+      "identifier" : "Style.test"
+    },
+    {
+      "script" : "dom/style/Text.test.js",
+      "name" : "Text.test",
+      "identifier" : "Text.test"
+    },
+    {
+      "script" : "dom/export.test.js",
+      "name" : "export.test",
+      "identifier" : "export.test"
+    },
+    {
+      "script" : "dom/find.test.js",
+      "name" : "find.test",
+      "identifier" : "find.test"
+    },
+    {
+      "script" : "dom/globalAssets.test.js",
+      "name" : "globalAssets.test",
+      "identifier" : "globalAssets.test"
+    },
+    {
+      "script" : "dom/import.test.js",
+      "name" : "import.test",
+      "identifier" : "import.test"
+    },
+    {
+      "script" : "dom/WrappedObject.test.js",
+      "name" : "WrappedObject.test",
+      "identifier" : "WrappedObject.test"
+    }
+  ],
+    "menu": {
+      "title": "Tests",
+      "items": [
+        {
+        "title": "dom",
+        "items": [
+          {
+            "title": "assets",
+            "items": [
+              "ColorAsset.test",
+              "GradientAsset.test"
+            ]
+          },
+          {
+            "title": "layers",
+            "items": [
+              "Artboard.test",
+              "Group.test",
+              "HotSpot.test",
+              "Image.test",
+              "Layer.test",
+              "Page.test",
+              "Shape.test",
+              "ShapePath.test",
+              "Slice.test",
+              "StyledLayer.test",
+              "SymbolInstance.test",
+              "testSymbolMaster.test",
+              "Text.test"
+            ]
+          },
+          {
+            "title": "models",
+            "items": [
+              "CurvePoint.test",
+              "Document.test",
+              "ExportFormat.test",
+              "Flow.test",
+              "ImageData.test",
+              "ImportableObject.test",
+              "Library.test",
+              "Override.test",
+              "Point.test",
+              "Rectangle.test",
+              "Selection.test",
+              "SharedStyle.test"
+            ]
+          },
+          {
+            "title": "style",
+            "items": [
+              "Blur.test",
+              "Border.test",
+              "BorderOptions.test",
+              "Color.test",
+              "Fill.test",
+              "Gradient.test",
+              "GradientStop.test",
+              "Shadow.test",
+              "Style.test",
+              "Text.test"
+            ]
+          }
+        ]
+        }
+      ]
+    }
+  }
