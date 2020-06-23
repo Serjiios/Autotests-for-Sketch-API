@@ -1,9 +1,16 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+var base64Image = require('__autoTest').base64Image;
+var Style = require('sketch').Style;
 
-import { base64Image } from '../../../test-utils'
-import { Style } from '../..'
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 test('should set the fills', () => {
   // setting the fills after creation

@@ -5,6 +5,14 @@ var Artboard = require('sketch').Artboard;
 var Group = require('sketch').Group;
 var Rectangle = require('sketch').Rectangle;
 var SymbolMaster = require('sketch').SymbolMaster;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 test('should set the name of the layer', (context, document) => {
   // setting an existing name

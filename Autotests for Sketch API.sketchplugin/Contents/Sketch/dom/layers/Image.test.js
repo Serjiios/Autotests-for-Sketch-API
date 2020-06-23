@@ -6,6 +6,14 @@ const base64Image =
 
 
 var Image = require('sketch').Image;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 test('should create an empty image', (context, document) => {
   const page = document.selectedPage

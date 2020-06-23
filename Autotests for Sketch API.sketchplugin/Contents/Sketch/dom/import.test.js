@@ -8,6 +8,14 @@ var Shape = require('sketch/dom').Shape;
 // BUG 
 // ToDo : reseach what is exportObject
 import { exportObject } from '../export'
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 
   test('should create Group from an SVG', () => {

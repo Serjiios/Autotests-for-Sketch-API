@@ -1,13 +1,21 @@
 /* globals expect, test */
 /* eslint-disable no-param-reassign */
 // eslint-disable-next-line import/named
-import { createSymbolMaster, canBeLogged } from '../../../test-utils'
 
+var createSymbolMaster = require('__autoTest').createSymbolMaster;
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var SymbolMaster = require('sketch').SymbolMaster;
 var Text = require('sketch').Text;
 var Artboard = require('sketch').Artboard;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 
 test('should create a symbol master from an artboard', (context, document) => {
@@ -18,7 +26,6 @@ test('should create a symbol master from an artboard', (context, document) => {
 
   expect(document.getSymbolMasterWithID(master.symbolId)).toEqual(master)
 
-  canBeLogged(master, SymbolMaster)
 })
 
 test('should replace a symbol master by an artboard', (context, document) => {

@@ -5,6 +5,14 @@ var dom = require('sketch/dom');
 var getGlobalColors = dom.getGlobalColors;
 var getGlobalGradients = dom.getGlobalGradients;
 var globalAssets = dom.globalAssets;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 
   test('should return global colors', () => {

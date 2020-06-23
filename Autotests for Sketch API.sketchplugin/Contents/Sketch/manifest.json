@@ -218,6 +218,11 @@
       "script" : "dom/WrappedObject.test.js",
       "name" : "WrappedObject.test",
       "identifier" : "WrappedObject.test"
+    },
+    {
+      "script" : "run all tests.js",
+      "name" : "Run all tests",
+      "identifier" : "run all tests"
     }
   ],
     "menu": {
@@ -247,7 +252,7 @@
               "Slice.test",
               "StyledLayer.test",
               "SymbolInstance.test",
-              "testSymbolMaster.test",
+              "SymbolMaster.test",
               "Text.test"
             ]
           },
@@ -284,7 +289,9 @@
             ]
           }
         ]
-        }
+        },
+        "-",
+        "run all tests"
       ]
     }
   }

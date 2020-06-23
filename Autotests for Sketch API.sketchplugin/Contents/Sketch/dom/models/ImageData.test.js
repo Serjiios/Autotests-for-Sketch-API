@@ -4,6 +4,14 @@ var expect = require('__autoTest').expect;
 var base64Image = require('__autoTest').base64Image;
 var Image = require('sketch/dom').Image;
 var Rectangle = require('sketch/dom').Rectangle;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 test('should return an ImageData when accessing `image`', (context, document) => {
   const page = document.selectedPage

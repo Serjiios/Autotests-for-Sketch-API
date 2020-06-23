@@ -6,6 +6,14 @@ var Document = require('sketch/dom').Document;
 var Artboard = require('sketch/dom').Artboard;
 var Text = require('sketch/dom').Text;
 var SymbolMaster = require('sketch/dom').SymbolMaster;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
   test('should import a symbol from a lib', () => {
     // BUG : Document constructor does not work correctly

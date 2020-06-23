@@ -3,6 +3,14 @@ var expect = require('__autoTest').expect;
 var Artboard = require('sketch').Artboard;
 var Group = require('sketch').Group;
 var HotSpot = require('sketch').HotSpot;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 test('should create a new HotSpot', () => {
   const hotspot = new HotSpot()

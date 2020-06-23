@@ -1,6 +1,14 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+var sketch = require('sketch'); 
+var document = sketch.getSelectedDocument();
+
+//Удалить все объекты со страницы
+pagelayers = document.selectedPage.layers;
+for (var i = 0; i < pagelayers.length; i++){
+pagelayers[i].remove()
+}
 
 import { WrappedObject } from '../WrappedObject'
 
