@@ -222,11 +222,10 @@
     {
       "script" : "run all tests.js",
       "name" : "Run all tests",
-      "identifier" : "run all tests"
+      "identifier" : "run_all_tests"
     }
   ],
     "menu": {
-      "title": "Tests",
       "items": [
         {
         "title": "dom",
@@ -287,11 +286,17 @@
               "Style.test",
               "Text.test"
             ]
-          }
+          },
+          "-",
+          "export.test",
+          "find.test",
+          "globalAssets.test",
+          "import.test",
+          "WrappedObject.test"
         ]
         },
         "-",
-        "run all tests"
+        "run_all_tests"
       ]
     }
   }
