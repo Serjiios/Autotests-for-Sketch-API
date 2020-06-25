@@ -4,12 +4,6 @@ var find = require('sketch').find;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 // BUG : TEST LATER
 test('should find by type', (context, document) => {
   // eslint-disable-next-line no-param-reassign

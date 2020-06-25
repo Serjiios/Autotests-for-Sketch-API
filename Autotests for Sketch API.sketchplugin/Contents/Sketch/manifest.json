@@ -278,7 +278,7 @@
               "Blur.test",
               "Border.test",
               "BorderOptions.test",
-              "Color.test",
+              
               "Fill.test",
               "Gradient.test",
               "GradientStop.test",

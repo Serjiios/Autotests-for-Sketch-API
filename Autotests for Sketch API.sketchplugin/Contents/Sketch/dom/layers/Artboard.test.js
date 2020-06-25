@@ -5,12 +5,6 @@ var Artboard = require('sketch').Artboard;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should create an artboard', () => {
   const artboard = new Artboard({ name: 'Test' })
   expect(artboard.type).toBe('Artboard')

@@ -5,13 +5,6 @@ var ShapePath = require('sketch').ShapePath;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
-
 test('should create a new shape path', () => {
   const shapePath = new ShapePath()
   expect(shapePath.type).toBe('ShapePath')

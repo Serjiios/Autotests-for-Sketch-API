@@ -11,13 +11,6 @@ var Artboard = require('sketch').Artboard;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
-
 test('should create a symbol master from an artboard', (context, document) => {
   // build the symbol master
   const { master } = createSymbolMaster(document)

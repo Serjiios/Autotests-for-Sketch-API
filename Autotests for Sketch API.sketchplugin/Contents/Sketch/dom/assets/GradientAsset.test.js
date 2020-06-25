@@ -5,12 +5,6 @@ var GradientAsset = require('sketch').GradientAsset
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should create gradient asset from dictionary', () => {
   const asset = GradientAsset.from({})
   expect(asset.gradient.type).toBe('Gradient')

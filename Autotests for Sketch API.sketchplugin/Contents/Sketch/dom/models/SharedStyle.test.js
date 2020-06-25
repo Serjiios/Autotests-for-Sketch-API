@@ -6,12 +6,6 @@ var Shape = require('sketch/dom').Shape;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should create a shared text style from a normal style', (context, document) => {
   // build the shared style
   // BUG : error creating Style

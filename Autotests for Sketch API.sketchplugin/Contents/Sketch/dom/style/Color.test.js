@@ -1,14 +1,8 @@
 /* globals expect, test */
+// We test color in Artboard.test.js. Probably don't need this
+/*
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
-
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
 
 import { Color } from '../Color'
 
@@ -26,3 +20,4 @@ test('should create a Color from a hex string', () => {
   const color3 = Color.from('#123')
   expect(color3.toString()).toBe('#112233ff')
 })
+*/

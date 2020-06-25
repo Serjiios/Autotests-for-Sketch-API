@@ -4,13 +4,7 @@ var expect = require('__autoTest').expect;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
-import { Style } from '../..'
+var Style = require('sketch').Style;
 
 test('should change the border options', () => {
   const style = new Style()

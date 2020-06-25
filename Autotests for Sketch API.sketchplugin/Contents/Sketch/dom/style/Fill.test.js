@@ -1,28 +1,20 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 var base64Image = require('__autoTest').base64Image;
 var Style = require('sketch').Style;
-
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
 
 test('should set the fills', () => {
   // setting the fills after creation
   const style = new Style()
   style.fills = ['#11223344', '#1234']
-  expect(style.sketchObject.fills().count()).toBe(2)
+  expect(style.fills.length).toBe(2)
 
   // setting the fills during creation
   const style2 = new Style({
     fills: ['#11223344', '#1234'],
   })
-  expect(style2.sketchObject.fills().count()).toBe(2)
+  expect(style2.fills.length).toBe(2)
 
   // setting the fills as an array of object
   const style3 = new Style({
@@ -37,7 +29,7 @@ test('should set the fills', () => {
       },
     ],
   })
-  expect(style3.sketchObject.fills().count()).toBe(2)
+  expect(style3.fills.length).toBe(2)
 
   // should still work with `Fill.type`
   const style4 = new Style({
@@ -48,7 +40,7 @@ test('should set the fills', () => {
       },
     ],
   })
-  expect(style4.sketchObject.fills().count()).toBe(1)
+  expect(style4.fills.length).toBe(1)
 })
 
 test('should get the fills', () => {

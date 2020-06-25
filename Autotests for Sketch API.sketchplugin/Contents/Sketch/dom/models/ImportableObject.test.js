@@ -9,12 +9,6 @@ var SymbolMaster = require('sketch/dom').SymbolMaster;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
   test('should import a symbol from a lib', () => {
     // BUG : Document constructor does not work correctly
     const document = new Document()

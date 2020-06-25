@@ -1,17 +1,23 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
+var Text = require('sketch').Text;
+var Rectangle = require('sketch').Rectangle;
+var Group = require('sketch').Group;
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
+const VerticalTextAlignmentMap = {
+    top: 0, // Visually top aligned
+    center: 1, // Visually centered
+    bottom: 2, // Visually bottom aligned
 }
 
-import { Text, Rectangle, Group } from '../..'
-import { VerticalTextAlignmentMap, TextAlignmentMap } from '../Text'
+const TextAlignmentMap = {
+    left: 0, // Visually left aligned
+    right: 1, // Visually right aligned
+    center: 2, // Visually centered
+    justified: 3, // Fully-justified. The last line in a paragraph is natural-aligned.
+    natural: 4, // Indicates the default alignment for script
+}
 
 test('should create a text style for a text layer', () => {
   const { style } = new Text({

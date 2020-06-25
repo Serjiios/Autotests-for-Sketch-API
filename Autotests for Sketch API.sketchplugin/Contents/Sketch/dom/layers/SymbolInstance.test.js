@@ -6,12 +6,6 @@ var SymbolMaster = require('sketch').SymbolMaster;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 function createSymbolMaster(document) {
   const artboard = new Artboard({
     name: 'Test',

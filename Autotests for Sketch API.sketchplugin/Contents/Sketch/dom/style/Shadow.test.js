@@ -1,16 +1,7 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
-
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
-import { Style } from '../..'
+var Style = require('sketch').Style;
 
 test('should set the shadows', () => {
   const style = new Style()
@@ -34,8 +25,8 @@ test('should set the shadows', () => {
       enabled: false,
     },
   ]
-  expect(style.sketchObject.shadows().count()).toBe(1)
-  expect(style.sketchObject.innerShadows().count()).toBe(1)
+  expect(style.shadows.length).toBe(1)
+    expect(style.innerShadows.length).toBe(1)
 })
 
 test('should get the shadows', () => {

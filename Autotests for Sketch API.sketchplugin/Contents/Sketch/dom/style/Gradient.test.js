@@ -1,20 +1,15 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
-
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
-import { Gradient, GradientType } from '../Gradient'
+var Gradient = require('sketch').Gradient;
+var Style = require('sketch').Style;
+var GradientType = require('sketch').Style.GradientType;
 
 test('should create a default gradient', () => {
+    const style = new Style({
+        fills: [{}]
+    }); 
   const gradient = Gradient.from({})
-  expect(String(gradient._object.class())).toBe('MSGradient')
   expect(gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
@@ -95,7 +90,7 @@ test('should change the from', () => {
   })
 })
 
-// https://github.com/sketch-hq/SketchAPI/issues/216
+
 test('should change the to', () => {
   const gradient = Gradient.from({})
   expect(gradient.toJSON()).toEqual({

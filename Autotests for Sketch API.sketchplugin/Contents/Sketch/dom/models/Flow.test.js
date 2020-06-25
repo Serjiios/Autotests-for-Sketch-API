@@ -7,12 +7,6 @@ var Flow = require('sketch/dom').Flow;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should create a flow between a layer and an artboard with a default animation', (context, document) => {
   const artboard = new Artboard({
     name: 'Test1',

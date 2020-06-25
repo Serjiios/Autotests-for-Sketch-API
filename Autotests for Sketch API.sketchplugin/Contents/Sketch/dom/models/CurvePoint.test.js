@@ -8,12 +8,6 @@ var CurvePoint = require('sketch/dom').CurvePoint
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should be able to log an CurvePoint', () => {
   const curvePoint = new CurvePoint()
   log(curvePoint)

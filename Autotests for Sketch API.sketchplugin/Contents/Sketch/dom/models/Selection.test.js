@@ -5,12 +5,6 @@ var Group = require('sketch/dom').Group;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('an empty document should have an empty selection', (context, document) => {
   expect(document.selectedLayers.isEmpty).toBe(true)
 })

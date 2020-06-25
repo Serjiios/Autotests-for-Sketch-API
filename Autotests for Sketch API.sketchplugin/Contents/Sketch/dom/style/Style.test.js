@@ -7,12 +7,6 @@ var Style = require('sketch').Style;
 var Shape = require('sketch').Shape;
 var createSharedStyle = require('__autoTest').createSharedStyle;
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should change the opacity', () => {
   const style = new Style()
   expect(style.opacity).toBe(1)

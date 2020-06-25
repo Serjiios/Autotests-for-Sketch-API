@@ -17,12 +17,6 @@ var createSymbolMaster = require('__autoTest').createSymbolMaster;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should be able to set overrides', (context, document) => {
   const { master, text } = createSymbolMaster(document)
   const instance = master.createNewInstance()

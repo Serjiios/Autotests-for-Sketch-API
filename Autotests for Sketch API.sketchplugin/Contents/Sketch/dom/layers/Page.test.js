@@ -6,8 +6,7 @@ var Group = require('sketch').Group;
 
 test('should return a Selection with the selected layers of the page', (context, document) => {
   const page = document.selectedPage
-  // BUG : not implemented
-  const selection = page.selectedLayers
+    const selection = page.selectedLayers
   expect(selection.isEmpty).toBe(true)
 
   const group = new Group({ parent: page, name: 'Test', selected: true })

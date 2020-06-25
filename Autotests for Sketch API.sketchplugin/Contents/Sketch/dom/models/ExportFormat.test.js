@@ -5,12 +5,6 @@ var Slice = require('sketch/dom').Slice;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
 test('should be able to log an ExportFormat', () => {
   const artboard = new Slice({
     exportFormats: [

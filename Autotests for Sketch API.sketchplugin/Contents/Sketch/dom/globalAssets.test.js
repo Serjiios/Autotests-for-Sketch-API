@@ -8,13 +8,6 @@ var globalAssets = dom.globalAssets;
 var sketch = require('sketch'); 
 var document = sketch.getSelectedDocument();
 
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
-
   test('should return global colors', () => {
     const colors = getGlobalColors()
     expect(colors.length > 0).toBe(true)

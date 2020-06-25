@@ -1,16 +1,9 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
-
-//Удалить все объекты со страницы
-pagelayers = document.selectedPage.layers;
-for (var i = 0; i < pagelayers.length; i++){
-pagelayers[i].remove()
-}
-
-import { Gradient } from '../Gradient'
+var Gradient = require('sketch').Gradient;
+var Style = require('sketch').Style;
+var GradientType = require('sketch').Style.GradientType;
 
 test('should create a gradient with some stops', () => {
   const gradient = Gradient.from({
