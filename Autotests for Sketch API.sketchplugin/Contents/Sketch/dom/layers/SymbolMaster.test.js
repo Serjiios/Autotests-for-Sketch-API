@@ -1,13 +1,11 @@
-/* globals expect, test */
-/* eslint-disable no-param-reassign */
-// eslint-disable-next-line import/named
-
-var createSymbolMaster = require('__autoTest').createSymbolMaster;
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
+var createSymbolMaster = require('__autoTest').createSymbolMaster;
 var SymbolMaster = require('sketch').SymbolMaster;
 var Text = require('sketch').Text;
 var Artboard = require('sketch').Artboard;
+
 
 test('should create a symbol master from an artboard', (context, document) => {
   // build the symbol master

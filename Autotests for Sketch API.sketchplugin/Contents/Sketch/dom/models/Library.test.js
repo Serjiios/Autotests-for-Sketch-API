@@ -1,6 +1,6 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var outputPath = require('__autoTest').outputPath;
 var Library = require('sketch/dom').Library;
 var Document = require('sketch/dom').Document;

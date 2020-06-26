@@ -1,10 +1,12 @@
- // BUG : NOT IMPLEMENTED
- var test = require('__autoTest').test;
+// BUG : NOT IMPLEMENTED
+var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var dom = require('sketch/dom');
 var getGlobalColors = dom.getGlobalColors;
 var getGlobalGradients = dom.getGlobalGradients;
 var globalAssets = dom.globalAssets;
+
 
   test('should return global colors', () => {
     const colors = getGlobalColors()

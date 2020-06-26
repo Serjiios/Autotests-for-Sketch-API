@@ -1,7 +1,7 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var find = require('sketch').find;
 
+var find = require('sketch').find;
 // BUG : TEST LATER
 test('should find by type', (context, document) => {
   // eslint-disable-next-line no-param-reassign

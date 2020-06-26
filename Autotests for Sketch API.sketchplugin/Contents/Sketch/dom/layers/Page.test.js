@@ -1,4 +1,3 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var Page = require('sketch').Page;
@@ -6,11 +5,10 @@ var Group = require('sketch').Group;
 
 test('should return a Selection with the selected layers of the page', (context, document) => {
   const page = document.selectedPage
-    const selection = page.selectedLayers
+  const selection = page.selectedLayers
   expect(selection.isEmpty).toBe(true)
 
   const group = new Group({ parent: page, name: 'Test', selected: true })
-
   expect(group.selected).toBe(true)
   expect(selection.isEmpty).toBe(false)
 

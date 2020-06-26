@@ -1,13 +1,11 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var createLayerFromData = require('__autoTest').createLayerFromData;
+var createLayerFromData = require('sketch').createLayerFromData;
 var Rectangle = require('sketch/dom').Rectangle;
 var exportObject = require('sketch/dom').exportObject;
 var Shape = require('sketch/dom').Shape;
-// BUG 
-// ToDo : reseach what is exportObject
-import { exportObject } from '../export'
+
+var exportObject = require('sketch/dom').export;
 
   test('should create Group from an SVG', () => {
     const svgString =

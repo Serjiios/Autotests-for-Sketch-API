@@ -1,5 +1,6 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var Rectangle = require('sketch/dom').Rectangle;
 var Group = require('sketch/dom').Group;
 

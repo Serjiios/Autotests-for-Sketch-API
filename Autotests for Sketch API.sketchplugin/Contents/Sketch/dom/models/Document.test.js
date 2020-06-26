@@ -1,6 +1,6 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var fs = require('fs');
 var outputPath = require('__autoTest').outputPath;
 
@@ -13,6 +13,7 @@ const ColorSpaceMap = require('__autoTest').ColorSpaceMap;
 
 var createSharedStyle = require('__autoTest').createSharedStyle;
 var createSymbolMaster = require('__autoTest').createSymbolMaster;
+
 
 test('should return the pages', (context, document) => {
   const { pages } = document

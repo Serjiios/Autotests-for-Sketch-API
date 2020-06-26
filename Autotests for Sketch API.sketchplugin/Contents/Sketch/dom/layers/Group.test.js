@@ -1,11 +1,11 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var Group = require('sketch').Group;
 var Text = require('sketch').Text;
 var Shape = require('sketch').Shape;
 var Rectangle = require('sketch').Rectangle;
 var SmartLayout = require('sketch').SmartLayout;
-
 
 test('should return the layers and can iterate through them', (context, document) => {
   const page = document.selectedPage
@@ -30,7 +30,7 @@ test('should transform a rectangle in page coords to local coords', (context, do
     parent: page,
     frame: new Rectangle(100, 100, 100, 100),
   })
-  // ToDo: Убрать этот тест или реализовать метод. В апи его нет
+  // BUG: not implemented
   const local = group.pageRectToLocalRect(new Rectangle(125, 75, 50, 200))
   expect(local).toEqual(new Rectangle(25, -25, 50, 200))
 })
@@ -45,6 +45,7 @@ test('should adjust the frame to fit its layers', (context, document) => {
     parent: group,
     frame: new Rectangle(50, 50, 50, 50),
   })
+  // BUG : not implemented
   group.adjustToFit()
   expect(shape.parent).toEqual(group)
   expect(group.frame).toEqual(new Rectangle(150, 150, 50, 50))
@@ -60,7 +61,7 @@ test('should create a group', (context, document) => {
 
 test('should create a group with some layers', (context, document) => {
   const page = document.selectedPage
-
+// BUG : Applier error no parameterless ctor for layers
   const group = new Group({
     parent: page,
     layers: [
@@ -86,7 +87,7 @@ test('should add a layer to a group', (context, document) => {
     ],
   })
   expect(group.layers.length).toBe(1)
-
+  // BUG : concat & push accepts only array. Need fix
   group.layers = group.layers.concat({
     type: 'Text',
     text: 'hello world',
@@ -108,11 +109,8 @@ test('should expose a smartLayout getter/setter', (context, document) => {
   })
 
   // returns null by default
-  // BUG : group.smartLayout = {}
   expect(group.smartLayout).toBe(null)
 
-  // can set to a value
-  // BUG : в сеттере group.smartLayout  значение groupNode?.GroupLayout равно null. сеттер не работает
   group.smartLayout = SmartLayout.TopToBottom
   expect(group.smartLayout).toBe(SmartLayout.TopToBottom)
 

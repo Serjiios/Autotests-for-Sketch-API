@@ -3,6 +3,7 @@ var expect = require('__autoTest').expect;
 var CurvePoint = require('sketch').CurvePoint;
 var ShapePath = require('sketch').ShapePath;
 
+
 test('should create a new shape path', () => {
   const shapePath = new ShapePath()
   expect(shapePath.type).toBe('ShapePath')

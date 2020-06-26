@@ -1,8 +1,6 @@
 /* globals expect, test */
-var test = require('__autoTest').test;
-var expect = require('__autoTest').expect;
-
-import { WrappedObject } from '../WrappedObject'
+// Probably we don't need this test
+/*import { WrappedObject } from '../WrappedObject'
 
 test('should keep the wrapped object in sketchObject', () => {
   const object = MSLayer.new()
@@ -21,3 +19,4 @@ test('should have _isWrappedObject set to true', () => {
   const wrapped = WrappedObject.fromNative(object)
   expect(wrapped._isWrappedObject).toBe(true)
 })
+*/

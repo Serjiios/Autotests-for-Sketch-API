@@ -1,4 +1,3 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var Artboard = require('sketch').Artboard;
@@ -17,7 +16,6 @@ test('should set the name of the layer', (context, document) => {
   expect(group.name).toBe('blah')
 
   // default name
-  // BUG : group2.name = null
   const group2 = new Group()
   expect(group2.name).toBe('Group')
 })
@@ -43,7 +41,7 @@ test('should duplicate the layer and add it as a sibling', (context, document) =
   const page = document.selectedPage
   const group = new Group({ parent: page })
   expect(page.layers.length).toBe(1)
-  // BUG : duplicate should return new layer
+  // BUG : duplicate Null ref error
   const result = group.duplicate()
   expect(page.layers.length).toBe(2)
   expect(result.type).toBe('Group')
@@ -51,7 +49,6 @@ test('should duplicate the layer and add it as a sibling', (context, document) =
 
 test('should duplicate the layer with no parent', () => {
   const group = new Group()
-  // BUG : duplicate
   const result = group.duplicate()
   expect(result.type).toBe('Group')
 })
@@ -64,7 +61,6 @@ test('should remove the layer from its parent', (context, document) => {
   expect(page.layers.length).toBe(1)
   const result = group.remove()
   expect(page.layers.length).toBe(0)
-  // BUG : error here
   expect(result).toEqual(group)
 })
 
@@ -76,7 +72,6 @@ test('should select the layer', (context, document) => {
 
   // start with nothing selected
   expect(group.selected).toBe(false)
-  // BUG : need to realize selectedLayers on page
   expect(page.selectedLayers.isEmpty).toBe(true)
 
   // select a layer
@@ -159,6 +154,7 @@ test('should reorder the layers using the index property', (context, document) =
   const group3 = new Group({
     parent: page,
   })
+  //
   expect(group1.index).toBe(0)
   expect(group2.index).toBe(1)
   expect(group3.index).toBe(2)
@@ -211,7 +207,7 @@ test('should convert rect to different coord system', (context, document) => {
     width: 10,
     height: 10,
   })
-
+  // BUG : NOT MPLEMENTED
   const pageRect = group.localRectToPageRect(
     new Rectangle({ x: 10, y: 10, width: 10, height: 10 })
   )
@@ -286,6 +282,7 @@ test('should get the different parents', (context, document) => {
   expect(group.getParentSymbolMaster()).toBe(undefined)
   expect(group.getParentShape()).toBe(undefined)
 
+  // BUG : Not implemented
   const symbolMaster = SymbolMaster.fromArtboard(artboard)
   expect(symbolMaster.parent).toEqual(page)
   expect(symbolMaster.getParentPage()).toEqual(page)
@@ -313,12 +310,12 @@ test('should transform the layer', () => {
     flippedHorizontally: true,
     flippedVertically: false,
   }
+  
   expect(group.transform.toJSON()).toEqual({
     rotation: 90,
     flippedHorizontally: true,
     flippedVertically: false,
   })
-
   group.transform.rotation = 720
   expect(group.transform.rotation).toBe(0)
 })
@@ -343,6 +340,6 @@ test('should remove a flow from a layer', (context, document) => {
   expect(rect.flow.targetId).toBe(artboard2.id)
 
   rect.flow = undefined
-
+  // BUG : null to undefined error
   expect(rect.flow).toBe(undefined)
 })

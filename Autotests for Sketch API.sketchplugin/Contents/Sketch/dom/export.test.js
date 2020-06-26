@@ -1,12 +1,13 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var Buffer = require('buffer');
 var fs = require('fs');
 
 var outputPath = require('__autoTest').outputPath;
+var exportObject = require('sketch').export;
+var objectFromJSON = require('sketch').objectFromJSON;
 
-import { exportObject, objectFromJSON } from '../export'
 var Shape = require('sketch').Shape;
 
 test('should return exported json data', () => {

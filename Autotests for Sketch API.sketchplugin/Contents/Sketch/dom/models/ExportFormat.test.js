@@ -1,8 +1,7 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var Slice = require('sketch/dom').Slice;
 
+var Slice = require('sketch/dom').Slice;
 test('should be able to log an ExportFormat', () => {
   const artboard = new Slice({
     exportFormats: [

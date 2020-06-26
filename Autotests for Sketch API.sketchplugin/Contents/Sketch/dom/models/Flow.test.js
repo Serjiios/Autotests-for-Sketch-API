@@ -1,9 +1,10 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var Artboard = require('sketch/dom').Artboard;
 var Group = require('sketch/dom').Group;
 var Flow = require('sketch/dom').Flow;
+
 
 test('should create a flow between a layer and an artboard with a default animation', (context, document) => {
   const artboard = new Artboard({

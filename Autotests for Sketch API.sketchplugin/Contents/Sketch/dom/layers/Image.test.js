@@ -1,4 +1,3 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 const base64Image = require('__autoTest').base64Image
@@ -32,4 +31,3 @@ test('should resize image to its original size', (context, document) => {
   expect(image.frame.width).toBe(50)
   expect(image.frame.height).toBe(50)
 })
-

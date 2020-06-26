@@ -1,26 +1,9 @@
-var test = require('__autoTest').test;
-var expect = require('__autoTest').expect;
 var Artboard = require('sketch').Artboard;
 var Text = require('sketch').Text;
 var SymbolMaster = require('sketch').SymbolMaster;
-
-function createSymbolMaster(document) {
-  const artboard = new Artboard({
-    name: 'Test',
-    parent: document.selectedPage,
-  })
-  const text = new Text({
-    text: 'Test value',
-    parent: artboard,
-  })
-
-  // build the symbol master
-  return {
-    master: SymbolMaster.fromArtboard(artboard),
-    text,
-    artboard,
-  }
-}
+var test = require('__autoTest').test;
+var expect = require('__autoTest').expect;
+var createSymbolMaster = require('__autoTest').createSymbolMaster;
 
 var SymbolInstance = require('sketch').SymbolInstance;
 var SmartLayout = require('sketch').SmartLayout;

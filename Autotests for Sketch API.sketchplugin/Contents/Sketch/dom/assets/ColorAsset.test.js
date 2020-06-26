@@ -1,5 +1,3 @@
-/* globals expect, test */
-// BUG : globalAssets not implenemted
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var ColorAsset = require('sketch').ColorAsset

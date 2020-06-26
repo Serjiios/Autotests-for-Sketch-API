@@ -1,6 +1,6 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var Style = require('sketch').Style;
 
 test('should set the shadows', () => {

@@ -1,6 +1,6 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var base64Image = require('__autoTest').base64Image;
 var Image = require('sketch/dom').Image;
 var Rectangle = require('sketch/dom').Rectangle;

@@ -1,16 +1,19 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var Gradient = require('sketch').Gradient;
+
 var Style = require('sketch').Style;
 var GradientType = require('sketch').Style.GradientType;
 
 test('should create a default gradient', () => {
-    const style = new Style({
-      fills: [{gradient:{}}]
-    }); 
-  const gradient = Gradient.from({})
-  expect(gradient.toJSON()).toEqual({
+
+  const gradient = {};
+
+  const style = new Style({
+    fills: [
+      { gradient: gradient }
+    ]
+  }); 
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
     to: { x: 0.5, y: 1 },
@@ -20,8 +23,13 @@ test('should create a default gradient', () => {
 })
 
 test('should create a gradient with a specific type', () => {
-  const gradient = Gradient.from({ gradientType: GradientType.Angular })
-  expect(gradient.toJSON()).toEqual({
+  const gradient = { gradientType: GradientType.Angular };
+  const style = new Style({
+    fills: [
+      { gradient: gradient }
+    ]
+  }); 
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Angular',
     from: { x: 0.5, y: 0 },
     to: { x: 0.5, y: 1 },
@@ -31,7 +39,7 @@ test('should create a gradient with a specific type', () => {
 })
 
 test('should create a gradient with a specific from and to coordinates', () => {
-  const gradient = Gradient.from({
+  const gradient = {
     from: {
       x: 1,
       y: 0.5,
@@ -40,8 +48,13 @@ test('should create a gradient with a specific from and to coordinates', () => {
       x: 2,
       y: 5,
     },
-  })
-  expect(gradient.toJSON()).toEqual({
+  }
+  const style = new Style({
+    fills: [
+      { gradient: gradient }
+    ]
+  }); 
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 1, y: 0.5 },
     to: { x: 2, y: 5 },
@@ -51,16 +64,21 @@ test('should create a gradient with a specific from and to coordinates', () => {
 })
 
 test('should change the from', () => {
-  const gradient = Gradient.from({})
-  expect(gradient.toJSON()).toEqual({
+  const gradient = {}
+  const style = new Style({
+    fills: [
+      { gradient: gradient }
+    ]
+  }); 
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
     to: { x: 0.5, y: 1 },
     aspectRatio: 0,
     stops: [],
   })
-  gradient.from.x = 0.7
-  expect(gradient.toJSON()).toEqual({
+  style.fills[0].gradient.from.x = 0.7
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.7, y: 0 },
     to: { x: 0.5, y: 1 },
@@ -68,8 +86,8 @@ test('should change the from', () => {
     stops: [],
   })
 
-  gradient.from.y = 0.1
-  expect(gradient.toJSON()).toEqual({
+  style.fills[0].gradient.from.y = 0.1
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.7, y: 0.1 },
     to: { x: 0.5, y: 1 },
@@ -77,11 +95,11 @@ test('should change the from', () => {
     stops: [],
   })
 
-  gradient.from = {
+  style.fills[0].gradient.from = {
     x: 0.1,
     y: 0.4,
   }
-  expect(gradient.toJSON()).toEqual({
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.1, y: 0.4 },
     to: { x: 0.5, y: 1 },
@@ -92,16 +110,22 @@ test('should change the from', () => {
 
 
 test('should change the to', () => {
-  const gradient = Gradient.from({})
-  expect(gradient.toJSON()).toEqual({
+  const gradient = {};
+  const style = new Style({
+    fills: [
+      { gradient: gradient }
+    ]
+  }); 
+
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
     to: { x: 0.5, y: 1 },
     aspectRatio: 0,
     stops: [],
   })
-  gradient.to.x = 0.7
-  expect(gradient.toJSON()).toEqual({
+  style.fills[0].gradient.to.x = 0.7
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
     to: { x: 0.7, y: 1 },
@@ -109,8 +133,8 @@ test('should change the to', () => {
     stops: [],
   })
 
-  gradient.to.y = 0.1
-  expect(gradient.toJSON()).toEqual({
+  style.fills[0].gradient.to.y = 0.1
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
     to: { x: 0.7, y: 0.1 },
@@ -118,11 +142,11 @@ test('should change the to', () => {
     stops: [],
   })
 
-  gradient.to = {
+  style.fills[0].gradient.to = {
     x: 0.1,
     y: 0.4,
   }
-  expect(gradient.toJSON()).toEqual({
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
     to: { x: 0.1, y: 0.4 },
@@ -133,7 +157,7 @@ test('should change the to', () => {
 
 // https://github.com/sketch-hq/SketchAPI/issues/230
 test('should create a gradient with a specific from and to coordinates including 0s', () => {
-  const gradient = Gradient.from({
+  const gradient = {
     from: {
       x: 0,
       y: 0,
@@ -142,8 +166,14 @@ test('should create a gradient with a specific from and to coordinates including
       x: 0,
       y: 0,
     },
-  })
-  expect(gradient.toJSON()).toEqual({
+  };
+  const style = new Style({
+    fills: [
+      { gradient: gradient }
+    ]
+  });
+
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0, y: 0 },
     to: { x: 0, y: 0 },
@@ -156,9 +186,15 @@ test('should set the aspect ratio of a gradient', () => {
   const gradient = Gradient.from({
     gradientType: 'Radial',
   })
-  expect(gradient.aspectRatio).toBe(0)
+  const style = new Style({
+    fills: [
+      { gradient: gradient }
+    ]
+  });
 
-  gradient.aspectRatio = 2
+  expect(style.fills[0].gradient.aspectRatio).toBe(0)
 
-  expect(gradient.aspectRatio).toBe(2)
+  style.fills[0].gradient.aspectRatio = 2
+
+  expect(style.fills[0].gradient.aspectRatio).toBe(2)
 })

@@ -1,9 +1,6 @@
 /* globals expect, test */
 // We test color in Artboard.test.js. Probably don't need this
 /*
-var test = require('__autoTest').test;
-var expect = require('__autoTest').expect;
-
 import { Color } from '../Color'
 
 test('should create a Color from a hex string', () => {

@@ -1,10 +1,9 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var Gradient = require('sketch').Gradient;
+var Style = require('sketch').Style;
 
 test('should create a gradient with some stops', () => {
-  const gradient = Gradient.from({
+  const gradient = {
     stops: [
       {
         position: 1,
@@ -19,8 +18,14 @@ test('should create a gradient with some stops', () => {
         color: '#1234',
       },
     ],
+  }
+  var style = new Style({
+    fills:[
+      {gradient:gradient}
+    ]
   })
-  expect(gradient.toJSON()).toEqual({
+  
+  expect(style.fills[0].gradient.toJSON()).toEqual({
     gradientType: 'Linear',
     from: { x: 0.5, y: 0 },
     to: { x: 0.5, y: 1 },

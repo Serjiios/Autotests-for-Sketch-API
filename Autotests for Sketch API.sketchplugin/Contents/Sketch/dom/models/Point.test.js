@@ -1,11 +1,10 @@
-/* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var Point = require('sketch/dom').Point;
 
+var Point = require('sketch/dom').Point;
 test('should create a point', () => {
   const r = new Point(1, 2)
-  // check that a point can be logged
+
   expect(r.x).toBe(1)
   expect(r.y).toBe(2)
 })

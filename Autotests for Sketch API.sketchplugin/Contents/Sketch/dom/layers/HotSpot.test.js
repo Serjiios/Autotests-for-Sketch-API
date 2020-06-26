@@ -1,5 +1,6 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
+
 var Artboard = require('sketch').Artboard;
 var Group = require('sketch').Group;
 var HotSpot = require('sketch').HotSpot;
@@ -20,8 +21,7 @@ test('should create a new HotSpot from a layer', (context, document) => {
     parent: document.selectedPage,
   })
 
-  // BUG : jsonApplier.Apply cannot set flow.
-  // ToDo : test all this module after fixes
+
   const rect = new Group({
     parent: artboard,
     flow: {
@@ -30,10 +30,11 @@ test('should create a new HotSpot from a layer', (context, document) => {
   })
 
   const hotspot = HotSpot.fromLayer(rect)
-
+  // BUG : if rect.flow == undefined then jsonApplier chashing
   expect(rect.flow).toBe(undefined)
 
   expect(hotspot.type).toEqual('HotSpot')
+  // BUG : animationType is enum. Here it is a string
   expect(hotspot.flow.toJSON()).toEqual({
     targetId: artboard2.id,
     type: 'Flow',
