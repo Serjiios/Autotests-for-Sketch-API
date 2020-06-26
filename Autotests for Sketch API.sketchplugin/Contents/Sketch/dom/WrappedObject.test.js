@@ -1,8 +1,6 @@
 /* globals expect, test */
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 import { WrappedObject } from '../WrappedObject'
 

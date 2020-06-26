@@ -3,8 +3,6 @@ var expect = require('__autoTest').expect;
 var Artboard = require('sketch').Artboard;
 var Text = require('sketch').Text;
 var SymbolMaster = require('sketch').SymbolMaster;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 function createSymbolMaster(document) {
   const artboard = new Artboard({

@@ -5,8 +5,6 @@ var Text = require('sketch').Text;
 var Shape = require('sketch').Shape;
 var Rectangle = require('sketch').Rectangle;
 var SmartLayout = require('sketch').SmartLayout;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 
 test('should return the layers and can iterate through them', (context, document) => {

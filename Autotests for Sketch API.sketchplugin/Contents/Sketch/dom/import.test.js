@@ -8,8 +8,6 @@ var Shape = require('sketch/dom').Shape;
 // BUG 
 // ToDo : reseach what is exportObject
 import { exportObject } from '../export'
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
   test('should create Group from an SVG', () => {
     const svgString =

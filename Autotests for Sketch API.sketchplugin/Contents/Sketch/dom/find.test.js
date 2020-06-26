@@ -1,8 +1,6 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var find = require('sketch').find;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 // BUG : TEST LATER
 test('should find by type', (context, document) => {

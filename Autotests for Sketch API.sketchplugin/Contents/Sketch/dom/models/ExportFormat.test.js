@@ -2,8 +2,6 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var Slice = require('sketch/dom').Slice;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should be able to log an ExportFormat', () => {
   const artboard = new Slice({

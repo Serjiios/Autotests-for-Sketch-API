@@ -4,8 +4,6 @@ var expect = require('__autoTest').expect;
 var Artboard = require('sketch/dom').Artboard;
 var Group = require('sketch/dom').Group;
 var Flow = require('sketch/dom').Flow;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should create a flow between a layer and an artboard with a default animation', (context, document) => {
   const artboard = new Artboard({

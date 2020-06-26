@@ -2,8 +2,6 @@ var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var Text = require('sketch/dom').Text;
 var Group = require('sketch/dom').Group;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('an empty document should have an empty selection', (context, document) => {
   expect(document.selectedLayers.isEmpty).toBe(true)

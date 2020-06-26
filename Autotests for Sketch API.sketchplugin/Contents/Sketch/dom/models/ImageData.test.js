@@ -4,8 +4,6 @@ var expect = require('__autoTest').expect;
 var base64Image = require('__autoTest').base64Image;
 var Image = require('sketch/dom').Image;
 var Rectangle = require('sketch/dom').Rectangle;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should return an ImageData when accessing `image`', (context, document) => {
   const page = document.selectedPage

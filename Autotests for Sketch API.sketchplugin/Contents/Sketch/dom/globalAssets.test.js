@@ -5,8 +5,6 @@ var dom = require('sketch/dom');
 var getGlobalColors = dom.getGlobalColors;
 var getGlobalGradients = dom.getGlobalGradients;
 var globalAssets = dom.globalAssets;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
   test('should return global colors', () => {
     const colors = getGlobalColors()

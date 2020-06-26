@@ -5,8 +5,6 @@ var expect = require('__autoTest').expect;
 var Document = require('sketch/dom').Document
 var ShapePath = require('sketch/dom').ShapePath
 var CurvePoint = require('sketch/dom').CurvePoint
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should be able to log an CurvePoint', () => {
   const curvePoint = new CurvePoint()

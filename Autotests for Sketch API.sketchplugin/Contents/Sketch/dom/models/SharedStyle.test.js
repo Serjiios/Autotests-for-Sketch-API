@@ -3,8 +3,6 @@ var expect = require('__autoTest').expect;
 var createSharedStyle = require('__autoTest').createSharedStyle;
 var Text = require('sketch/dom').Text;
 var Shape = require('sketch/dom').Shape;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should create a shared text style from a normal style', (context, document) => {
   // build the shared style

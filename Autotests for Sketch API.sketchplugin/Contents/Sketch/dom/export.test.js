@@ -9,9 +9,6 @@ var outputPath = require('__autoTest').outputPath;
 import { exportObject, objectFromJSON } from '../export'
 var Shape = require('sketch').Shape;
 
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
-
 test('should return exported json data', () => {
   const object = new Shape()
   const archive = exportObject(object, {

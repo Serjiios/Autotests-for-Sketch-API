@@ -13,8 +13,6 @@ const ColorSpaceMap = require('__autoTest').ColorSpaceMap;
 
 var createSharedStyle = require('__autoTest').createSharedStyle;
 var createSymbolMaster = require('__autoTest').createSymbolMaster;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should return the pages', (context, document) => {
   const { pages } = document

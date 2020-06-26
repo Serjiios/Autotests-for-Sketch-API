@@ -3,8 +3,6 @@ var expect = require('__autoTest').expect;
 var Artboard = require('sketch').Artboard;
 var Group = require('sketch').Group;
 var HotSpot = require('sketch').HotSpot;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should create a new HotSpot', () => {
   const hotspot = new HotSpot()

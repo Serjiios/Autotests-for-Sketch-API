@@ -2,8 +2,6 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var Artboard = require('sketch').Artboard;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should create an artboard', () => {
   const artboard = new Artboard({ name: 'Test' })

@@ -2,8 +2,6 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var Gradient = require('sketch').Gradient;
-var Style = require('sketch').Style;
-var GradientType = require('sketch').Style.GradientType;
 
 test('should create a gradient with some stops', () => {
   const gradient = Gradient.from({

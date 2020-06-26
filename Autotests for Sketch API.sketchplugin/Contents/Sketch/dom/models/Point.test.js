@@ -2,8 +2,6 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 var Point = require('sketch/dom').Point;
-var sketch = require('sketch'); 
-var document = sketch.getSelectedDocument();
 
 test('should create a point', () => {
   const r = new Point(1, 2)

@@ -7,7 +7,7 @@ var GradientType = require('sketch').Style.GradientType;
 
 test('should create a default gradient', () => {
     const style = new Style({
-        fills: [{}]
+      fills: [{gradient:{}}]
     }); 
   const gradient = Gradient.from({})
   expect(gradient.toJSON()).toEqual({
