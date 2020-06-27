@@ -1,12 +1,11 @@
 var fs = require('fs');
-var Document = require('sketch/dom').Document;
 
 console.log('ColorAsset');
 console.log('-------------');
+console.log('ColorAsset');
 eval(fs.readFileSync(context.scriptPath + "/dom/assets/ColorAsset.test.js",{encoding:"utf8"}));
 
 //new Document()
-
 console.log('-------------');
 console.log('GradientAsset');
 console.log('-------------');
