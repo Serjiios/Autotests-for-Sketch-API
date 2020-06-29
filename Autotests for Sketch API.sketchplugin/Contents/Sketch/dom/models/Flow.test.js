@@ -88,7 +88,7 @@ test('should create a flow between a layer and an artboard with a specific anima
       animationType: Flow.AnimationType.slideFromLeft,
     },
   })
-
+// BUG : Error getting 'target' on Flow
   expect(rect.flow.toJSON()).toEqual({
     targetId: artboard2.id,
     type: 'Flow',

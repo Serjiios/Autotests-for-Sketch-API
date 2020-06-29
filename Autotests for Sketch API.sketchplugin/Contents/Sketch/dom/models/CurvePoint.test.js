@@ -1,7 +1,5 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
-
-// ToDo : whole test is not working because we cannoit create new instance of ccurvePoint from js. Sketch cannot too
 var Document = require('sketch/dom').Document
 var ShapePath = require('sketch/dom').ShapePath
 

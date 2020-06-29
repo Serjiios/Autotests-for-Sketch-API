@@ -31,7 +31,6 @@ test('should set the frame of the layer', () => {
 
 test('mutating a frame should change the frame of a layer', () => {
   const group = new Group()
-  // BUG : group.frame.width by default = 100
   expect(group.frame.width).toBe(100)
   group.frame.width = 400
   expect(group.frame.width).toBe(400)
