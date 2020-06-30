@@ -7,7 +7,7 @@
   "icon" : "api-reference.png",
   "authorEmail" : "Lunacy@icons8.com",
   "author" : "Lunacy Team",
-  "appcast": "заполнить",
+  "appcast": "https://github.com/Serjiios/Autotests-for-Sketch-API/blob/master/appcast.xml",
   "commands" : [
     {
       "script" : "dom/assets/ColorAsset.test.js",
@@ -223,12 +223,25 @@
       "script" : "run all tests.js",
       "name" : "Run all tests",
       "identifier" : "run_all_tests"
+    },
+    {
+      "script" : "async/async.test.js",
+      "name" : "async.test",
+      "identifier" : "async.test"
+    },
+    {
+      "script" : "settings/Settings.test.js",
+      "name" : "Settings.test",
+      "identifier" : "Settings.test"
     }
   ],
     "menu": {
       "items": [
-        {
-        "title": "dom",
+        
+        {"title": "async",
+        "items": ["async.test"]
+        },
+        {"title": "dom",
         "items": [
           {
             "title": "assets",
@@ -294,6 +307,9 @@
           "import.test",
           "WrappedObject.test"
         ]
+        },
+        {"title": "settings",
+        "items": ["Settings.test"]
         },
         "-",
         "run_all_tests"
