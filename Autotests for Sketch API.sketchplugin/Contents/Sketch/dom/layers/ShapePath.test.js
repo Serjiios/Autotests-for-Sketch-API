@@ -11,7 +11,7 @@ test('should create a new shape path', () => {
 // ToDo : probably don't need this
 // {} expected to be equal to "Rectangle"'
 test('should expose PointType', () => {
-  expect(ShapePath.PointType).toBe(CurvePoint.PointType)
+  expect(ShapePath.PointType.Undefined).toBe(CurvePoint.PointType.Undefined);
 })
 
 test('should create shape paths of different shape type', () => {

@@ -28,7 +28,7 @@ test('should change the blending mode', () => {
 test('default style should not have any fills', () => {
   // setting the fills after creation
   const style = new Style()
-  expect(style.sketchObject.fills().count()).toBe(0)
+  expect(style.fills.length).toBe(0)
 })
 
 test('should be in and out of sync with its shared style', (context, document) => {

@@ -183,9 +183,9 @@ test('should create a gradient with a specific from and to coordinates including
 })
 
 test('should set the aspect ratio of a gradient', () => {
-  const gradient = Gradient.from({
+  const gradient = {
     gradientType: 'Radial',
-  })
+  }
   const style = new Style({
     fills: [
       { gradient: gradient }

@@ -22,7 +22,6 @@ test('should create a Text layer', () => {
   expect(text.type).toBe('Text')
 })
 
-// BUG : Text.text setter not working correctly
 test('should be able to change the text value', () => {
   const text = new Text({ text: 'blah' })
   expect(text.text).toBe('blah')

@@ -32,7 +32,7 @@ test('should return the selected layers', (context, document) => {
     selected: true,
   })
 
-  expect(group.selected).not.toBe(false)
+  expect(group.selected).toBe(true)
   expect(selection.isEmpty).toBe(false)
 
   document.selectedLayers = [] // eslint-disable-line
