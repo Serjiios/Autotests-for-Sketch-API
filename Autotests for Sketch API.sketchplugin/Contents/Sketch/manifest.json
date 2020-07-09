@@ -225,6 +225,11 @@
       "identifier" : "run_all_tests"
     },
     {
+      "script" : "run all (in new Doc).js",
+      "name" : "Run all (in new Doc)",
+      "identifier" : "run all (in new Doc)"
+    },
+    {
       "script" : "async/async.test.js",
       "name" : "async.test",
       "identifier" : "async.test"
@@ -312,7 +317,8 @@
         "items": ["Settings.test"]
         },
         "-",
-        "run_all_tests"
+        "run_all_tests",
+        "run all (in new Doc)"
       ]
     }
   }

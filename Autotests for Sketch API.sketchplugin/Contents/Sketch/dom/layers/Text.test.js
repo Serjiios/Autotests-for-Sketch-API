@@ -12,6 +12,7 @@ const TextAlignmentMap = {
 const TextLineSpacingBehaviourMap = {
   variable: 1, // Uses min & max line height on paragraph style
   constantBaseline: 2, // Uses MSConstantBaselineTypesetter for fixed line height
+  natural: 3,
 }
 
 var Text = require('sketch').Text;
