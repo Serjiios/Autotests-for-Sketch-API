@@ -12,11 +12,11 @@ const VerticalTextAlignmentMap = {
 }
 
 const TextAlignmentMap = {
-    left: 0, // Visually left aligned
-    right: 1, // Visually right aligned
-    center: 2, // Visually centered
-    justified: 3, // Fully-justified. The last line in a paragraph is natural-aligned.
-    natural: 4, // Indicates the default alignment for script
+    left: 'left', // Visually left aligned
+    right: 'right', // Visually right aligned
+    center: 'center', // Visually centered
+    justified: 'justified', // Fully-justified. The last line in a paragraph is natural-aligned.
+    natural: 'natural', // Indicates the default alignment for script
 }
 
 test('should create a text style for a text layer', () => {
@@ -152,8 +152,7 @@ test('should change the font size', () => {
     frame: new Rectangle(10, 10, 1000, 1000),
   })
 
-  // default to 12
-  expect(text.style.fontSize).toBe(12)
+  expect(text.style.fontSize).toBe(18)
 
   text.style.fontSize = 40
   expect(text.style.fontSize).toBe(40)
@@ -184,8 +183,8 @@ test('should change the font family', () => {
     frame: new Rectangle(10, 10, 1000, 1000),
   })
 
-  // default to 'Helvetica'
-  expect(text.style.fontFamily).toBe('Helvetica')
+  // default to 'Segoe UI'
+  expect(text.style.fontFamily).toBe('Segoe UI')
 
   text.style.fontFamily = 'Arial'
   expect(text.style.fontFamily).toBe('Arial')
@@ -195,8 +194,8 @@ test('should change the font family', () => {
   expect(text.style.fontFamily).toBe('Arial')
 
   // system should set the font family to the system font
-  text.style.fontFamily = 'system'
-  expect(text.style.fontFamily).toBe('system')
+  text.style.fontFamily = 'Times New Roman'
+  expect(text.style.fontFamily).toBe('Times New Roman')
 })
 
 test('should change the font weight', () => {
@@ -209,16 +208,16 @@ test('should change the font weight', () => {
   expect(text.style.fontWeight).toBe(5)
 
   text.style.fontWeight = 9
-  expect(text.style.fontFamily).toBe('Helvetica')
+  expect(text.style.fontFamily).toBe('Segoe UI')
   expect(text.style.fontWeight).toBe(9)
 
   text.style.fontWeight = 5
-  expect(text.style.fontFamily).toBe('Helvetica')
+  expect(text.style.fontFamily).toBe('Segoe UI')
   expect(text.style.fontWeight).toBe(5)
 
   // non existent font weight will pick the closest one
   text.style.fontWeight = 12
-  expect(text.style.fontFamily).toBe('Helvetica')
+  expect(text.style.fontFamily).toBe('Segoe UI')
   expect(text.style.fontWeight).toBe(9)
 })
 
@@ -270,7 +269,7 @@ test('should change the font stretch', () => {
   expect(text.style.fontStretch).toBe(undefined)
 
   // but not all font families tho
-  text.style.fontFamily = 'Helvetica Neue'
+  text.style.fontFamily = 'Segoe UI Neue'
   text.style.fontWeight = 9
   text.style.fontStretch = 'condensed'
   expect(text.style.fontStretch).toBe('condensed')
@@ -335,7 +334,7 @@ test('should get the default line height', () => {
     frame: new Rectangle(10, 10, 1000, 1000),
   })
 
-  expect(text.style.getDefaultLineHeight()).toBe(14)
+  expect(text.style.getDefaultLineHeight()).toBe(24)
 
   const group = new Group({
     frame: new Rectangle(10, 10, 1000, 1000),

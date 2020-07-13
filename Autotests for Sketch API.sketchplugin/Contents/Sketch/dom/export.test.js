@@ -1,7 +1,7 @@
 var test = require('__autoTest').test;
 var expect = require('__autoTest').expect;
 
-var Buffer = require('buffer');
+var Buffer = require('buffer').Buffer;
 var fs = require('fs');
 
 var outputPath = require('__autoTest').outputPath;
