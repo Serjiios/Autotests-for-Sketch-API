@@ -93,7 +93,7 @@ eval(fs.readFileSync(context.scriptPath + "/dom/layers/SymbolMaster.test.js",{en
 i += 1;
 
 console.log('-------------');
-console.log('Text');
+console.log('layers_Text');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/layers/Text.test.js",{encoding:"utf8"}));
 i += 1;
@@ -226,7 +226,7 @@ eval(fs.readFileSync(context.scriptPath + "/dom/style/Style.test.js",{encoding:"
 i += 1;
 
 console.log('-------------');
-console.log('Text');
+console.log('style_Text');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/style/Text.test.js",{encoding:"utf8"}));
 i += 1;

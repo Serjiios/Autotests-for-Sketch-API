@@ -82,7 +82,7 @@
     {
       "script" : "dom/layers/Text.test.js",
       "name" : "Text.test",
-      "identifier" : "Text.test"
+      "identifier" : "layer_Text.test"
     },
     {
       "script" : "dom/models/CurvePoint.test.js",
@@ -192,7 +192,7 @@
     {
       "script" : "dom/style/Text.test.js",
       "name" : "Text.test",
-      "identifier" : "Text.test"
+      "identifier" : "style_Text.test"
     },
     {
       "script" : "dom/export.test.js",
@@ -270,7 +270,7 @@
               "StyledLayer.test",
               "SymbolInstance.test",
               "SymbolMaster.test",
-              "Text.test"
+              "layer_Text.test"
             ]
           },
           {
@@ -302,7 +302,7 @@
               "GradientStop.test",
               "Shadow.test",
               "Style.test",
-              "Text.test"
+              "style_Text.test"
             ]
           },
           "-",

@@ -109,7 +109,7 @@ i += 1;
 
 new Document()
 console.log('-------------');
-console.log('Text');
+console.log('layers/Text');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/layers/Text.test.js",{encoding:"utf8"}));
 i += 1;
@@ -262,7 +262,7 @@ i += 1;
 
 new Document()
 console.log('-------------');
-console.log('Text');
+console.log('style/Text');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/style/Text.test.js",{encoding:"utf8"}));
 i += 1;
