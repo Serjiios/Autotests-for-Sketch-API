@@ -135,12 +135,6 @@ eval(fs.readFileSync(context.scriptPath + "/dom/models/ImportableObject.test.js"
 i += 1;
 
 console.log('-------------');
-console.log('Library');
-console.log('-------------');
-eval(fs.readFileSync(context.scriptPath + "/dom/models/Library.test.js",{encoding:"utf8"}));
-i += 1;
-
-console.log('-------------');
 console.log('Override');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/models/Override.test.js",{encoding:"utf8"}));
@@ -266,6 +260,13 @@ console.log('-------------');
 console.log('Settings');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/settings/Settings.test.js",{encoding:"utf8"}));
+i += 1;
+
+new Document()
+console.log('-------------');
+console.log('Library');
+console.log('-------------');
+eval(fs.readFileSync(context.scriptPath + "/dom/models/Library.test.js",{encoding:"utf8"}));
 i += 1;
 
 UI.alert("Finish", i + " tests completed")

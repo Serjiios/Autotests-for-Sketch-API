@@ -57,6 +57,6 @@ test('should show if a point is selected', () => {
     parent: document.selectedPage,
   })
   expect(shape.points[0].isSelected()).toBe(false)
-  document.close()
+  //document.close()
 })
 
