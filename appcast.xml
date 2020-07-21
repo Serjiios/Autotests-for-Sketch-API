@@ -12,5 +12,12 @@
   </description>
   <enclosure url="https://github.com/Serjiios/Autotests-for-Sketch-API/releases/download/1.0/Autotests.for.Sketch.API.sketchplugin.zip" sparkle:version="1.0.0"/>
 </item>
+<item>
+  <title>Version 1.0.1</title>
+  <description>
+    Beta version for testing
+  </description>
+  <enclosure url="https://github.com/Serjiios/Autotests-for-Sketch-API/releases/download/1.1/Autotests.for.Sketch.API.sketchplugin.zip" sparkle:version="1.0.1"/>
+</item>
 </channel>
 </rss>
