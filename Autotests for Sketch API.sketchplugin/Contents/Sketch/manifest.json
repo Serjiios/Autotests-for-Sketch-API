@@ -8,7 +8,7 @@
   "authorEmail" : "Lunacy@icons8.com",
   "author" : "Lunacy Team",
   "homepage": "https://github.com/Serjiios/Autotests-for-Sketch-API",
-  "appcast": "https://github.com/Serjiios/Autotests-for-Sketch-API/blob/master/appcast.xml",
+  "appcast": "https://raw.githubusercontent.com/Serjiios/Autotests-for-Sketch-API/master/appcast.xml,
   "commands" : [
     {
       "script" : "dom/assets/ColorAsset.test.js",
