@@ -1,6 +1,6 @@
 {
   "name" : "Autotests for Sketch API",
-  "version" : "1.0",
+  "version" : "1.0.0",
   "identifier" : "Autotests for Sketch API",
   "disableCocoaScriptPreprocessor": true,
   "description" : "A set of autotests for checking Sketch API",

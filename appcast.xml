@@ -6,11 +6,11 @@
 <description>A set of autotests for checking Sketch API>
 <language>en</language>
 <item>
-  <title>Version 1.0</title>
+  <title>Version 1.0.0</title>
   <description>
     Beta version for testing
   </description>
-  <enclosure url="https://github.com/Serjiios/Autotests-for-Sketch-API/releases/download/1.0/Autotests.for.Sketch.API.sketchplugin.zip" sparkle:version="1.0"/>
+  <enclosure url="https://github.com/Serjiios/Autotests-for-Sketch-API/releases/download/1.0/Autotests.for.Sketch.API.sketchplugin.zip" sparkle:version="1.0.0"/>
 </item>
 </channel>
 </rss>
