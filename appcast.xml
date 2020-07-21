@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
 <title>Autotests for Sketch API</title>
 <link>http://sparkle-project.org/files/sparkletestcast.xml</link>
-<description>A set of autotests for checking Sketch API>
+<description>A set of autotests for checking Sketch API</description>
 <language>en</language>
 <item>
   <title>Version 1.0.0</title>
