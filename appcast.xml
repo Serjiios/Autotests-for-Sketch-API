@@ -9,5 +9,9 @@
   <title>Version 1.0.0</title>
   <enclosure url="https://github.com/Serjiios/Autotests-for-Sketch-API/releases/download/1.0/Autotests.for.Sketch.API.sketchplugin.zip" sparkle:version="1.0.0"/>
 </item>
+  <item>
+  <title>Version 1.0.1</title>
+  <enclosure url="https://github.com/Serjiios/Autotests-for-Sketch-API/releases/download/1.0/Autotests.for.Sketch.API.sketchplugin.zip" sparkle:version="1.0.0"/>
+</item>
 </channel>
 </rss>
