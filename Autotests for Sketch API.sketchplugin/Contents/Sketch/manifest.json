@@ -7,6 +7,7 @@
   "icon" : "api-reference.png",
   "authorEmail" : "Lunacy@icons8.com",
   "author" : "Lunacy Team",
+  "homepage": "https://github.com/Serjiios/Autotests-for-Sketch-API",
   "appcast": "https://github.com/Serjiios/Autotests-for-Sketch-API/blob/master/appcast.xml",
   "commands" : [
     {
