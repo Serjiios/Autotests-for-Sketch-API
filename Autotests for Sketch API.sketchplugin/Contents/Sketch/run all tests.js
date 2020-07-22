@@ -105,12 +105,6 @@ eval(fs.readFileSync(context.scriptPath + "/dom/models/CurvePoint.test.js",{enco
 i += 1;
 
 console.log('-------------');
-console.log('Document');
-console.log('-------------');
-eval(fs.readFileSync(context.scriptPath + "/dom/models/Document.test.js",{encoding:"utf8"}));
-i += 1;
-
-console.log('-------------');
 console.log('ExportFormat');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/models/ExportFormat.test.js",{encoding:"utf8"}));
@@ -126,12 +120,6 @@ console.log('-------------');
 console.log('ImageData');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/models/ImageData.test.js",{encoding:"utf8"}));
-i += 1;
-
-console.log('-------------');
-console.log('ImportableObject');
-console.log('-------------');
-eval(fs.readFileSync(context.scriptPath + "/dom/models/ImportableObject.test.js",{encoding:"utf8"}));
 i += 1;
 
 console.log('-------------');
@@ -266,6 +254,18 @@ console.log('-------------');
 console.log('Library');
 console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/dom/models/Library.test.js",{encoding:"utf8"}));
+i += 1;
+
+console.log('-------------');
+console.log('Document');
+console.log('-------------');
+eval(fs.readFileSync(context.scriptPath + "/dom/models/Document.test.js",{encoding:"utf8"}));
+i += 1;
+
+console.log('-------------');
+console.log('ImportableObject');
+console.log('-------------');
+eval(fs.readFileSync(context.scriptPath + "/dom/models/ImportableObject.test.js",{encoding:"utf8"}));
 i += 1;
 
 UI.alert("Finish", i + " tests completed")
