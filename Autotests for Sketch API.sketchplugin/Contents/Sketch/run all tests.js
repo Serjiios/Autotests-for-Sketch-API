@@ -262,7 +262,6 @@ console.log('-------------');
 eval(fs.readFileSync(context.scriptPath + "/settings/Settings.test.js",{encoding:"utf8"}));
 i += 1;
 
-new Document()
 console.log('-------------');
 console.log('Library');
 console.log('-------------');
