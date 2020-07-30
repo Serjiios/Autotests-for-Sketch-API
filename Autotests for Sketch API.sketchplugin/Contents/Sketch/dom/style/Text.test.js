@@ -269,7 +269,7 @@ test('should change the font stretch', () => {
   expect(text.style.fontStretch).toBe(undefined)
 
   // but not all font families tho
-  text.style.fontFamily = 'Segoe UI Neue'
+  text.style.fontFamily = 'Roboto'
   text.style.fontWeight = 9
   text.style.fontStretch = 'condensed'
   expect(text.style.fontStretch).toBe('condensed')

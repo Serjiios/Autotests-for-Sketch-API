@@ -214,9 +214,7 @@ await test('should save a file', () =>
         )
     }).then(result => {
         expect(result).toBe(_document)
-        expect(_document.path).toBe(
-            String(`${outputPath()}/sketch-api-unit-tests.sketch`)
-        )
+        expect(_document.path.endsWith('sketch-api-unit-tests.sketch')).toBe(true)
     }))
 
 await test('should save a file without specifying the path', () =>
@@ -229,10 +227,7 @@ await test('should save a file without specifying the path', () =>
         })
     }).then(result => {
         expect(result).toBe(_document)
-        expect(_document.path).toBe(
-            String(`${outputPath()}/sketch-api-unit-tests.sketch`)
-        )
-
+        expect(_document.path.endsWith('sketch-api-unit-tests.sketch')).toBe(true)
     }))
 
 await test('should save a file to a specific path when setting the path', () => {
@@ -246,10 +241,7 @@ await test('should save a file to a specific path when setting the path', () => 
         })
     }).then(result => {
         expect(result).toBe(_document)
-        expect(_document.path).toBe(
-            String(`${outputPath()}/sketch-api-unit-tests-2.sketch`)
-        )
-
+        expect(_document.path.endsWith('sketch-api-unit-tests-2.sketch')).toBe(true)
     })
 })
 

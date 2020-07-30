@@ -91,13 +91,7 @@ function findValidLib(libs) {
 	await test('should get the document of the library', () => {
 		const document = lib.getDocument()
 		expect(document.type).toBe('Document')
-		expect(document.path).toBe(
-			String(
-				NSString.stringWithString(
-					`${outputPath()}sketch-api-unit-tests-library.sketch`
-				)
-			)
-		)
+		expect(document.path.endsWith('sketch-api-unit-tests-library.sketch')).toBe(true)
 	})
 
 	await test('should remove a library', () => {
