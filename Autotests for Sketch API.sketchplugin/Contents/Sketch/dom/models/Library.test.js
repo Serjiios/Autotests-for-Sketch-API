@@ -101,20 +101,20 @@ function findValidLib(libs) {
 		expect(libraries.find(d => d.id === libId)).toBe(undefined)
 	})
 
-	await test('should add a remote library', () =>
-		new Promise((resolve, reject) => {
-			Library.getRemoteLibraryWithRSS(
-				'https://client.sketch.cloud/v1/shares/PR8z1/rss',
-				(err, result) => {
-					if (err) {
-						return reject(err)
-					}
-					return resolve(result)
-				}
-			)
-		}).then(result => {
-			expect(result.libraryType).toBe(Library.LibraryType.RemoteThirdParty)
-			result.remove()
-		}))
+	//await test('should add a remote library', () =>
+	//	new Promise((resolve, reject) => {
+	//		Library.getRemoteLibraryWithRSS(
+	//			'https://client.sketch.cloud/v1/shares/PR8z1/rss',
+	//			(err, result) => {
+	//				if (err) {
+	//					return reject(err)
+	//				}
+	//				return resolve(result)
+	//			}
+	//		)
+	//	}).then(result => {
+	//		expect(result.libraryType).toBe(Library.LibraryType.RemoteThirdParty)
+	//		result.remove()
+	//	}))
 
 })();
