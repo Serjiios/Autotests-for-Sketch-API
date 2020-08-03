@@ -9,8 +9,7 @@ var Group = require('sketch/dom').Group
 var Shape = require('sketch/dom').Shape
 var Text = require('sketch/dom').Text
 
-const ColorSpaceMap = require('__autoTest').ColorSpaceMap;
-
+var ColorSpaceMap = require('__autoTest').ColorSpaceMap;
 var createSharedStyle = require('__autoTest').createSharedStyle;
 var createSymbolMaster = require('__autoTest').createSymbolMaster;
 
