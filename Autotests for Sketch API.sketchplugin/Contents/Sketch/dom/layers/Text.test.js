@@ -36,7 +36,7 @@ test('should adjust its size to the string with `adjustToFit`', () => {
         frame: new Rectangle(10, 10, 1000, 1000),
     })
     text.adjustToFit()
-    expect(text.frame).toEqual(new Rectangle(10, 10, 34.2861328, 24))
+    expect(text.frame).toEqual(new Rectangle(10, 10, 36.230114, 22))
 })
 
 test('should change the text alignment', () => {
@@ -119,9 +119,9 @@ test('should return the fragments of a text layer', () => {
 
     // https://github.com/sketch-hq/SketchAPI/issues/144
     text = new Text({
-        text: 'Test\nHello\n123\no',
-    })
-    // eslint-disable-next-line
+            text: 'Test\nHello\n123\no',
+        })
+        // eslint-disable-next-line
     fragments = text.fragments
 
     expect(fragments.length).toBe(4)
@@ -156,4 +156,3 @@ test('should return the fragments of a text layer', () => {
     })
     expect(fragments[2].text).toBe('o')
 })
-
